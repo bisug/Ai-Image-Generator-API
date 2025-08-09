@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hugging Face Image Generator</title>
+</head>
+<body style="font-family: Arial; text-align: center;">
+    <h1>Hugging Face Image Generator API</h1>
+    <p>Credit: <a href="https://github.com/bisug" target="_blank">GitHub bisug</a></p>
+
+    <h3>How to use the API</h3>
+    <code>GET /generate?model=MODEL_NAME&prompt=YOUR_PROMPT</code>
+
+    <h4>Available Models:</h4>
+    <ul>
+        {% for key, value in models.items() %}
+        <li><b>{{ key }}</b> → {{ value }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Example:</h3>
+    <p><a href="/generate?model=sdxl&prompt=A+beautiful+golden+bird">Generate Golden Bird</a></p>
+</body>
+</html>
