@@ -1,23 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Hugging Face Image Generator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #f0f4f8, #e6ecf3);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #444;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            max-width: 500px;
+            margin: auto;
+            text-align: left;
+        }
+        li {
+            background: white;
+            margin: 5px 0;
+            padding: 8px;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
-<body style="font-family: Arial; text-align: center;">
-    <h1>Hugging Face Image Generator API</h1>
-    <p>Credit: <a href="https://github.com/bisug" target="_blank">GitHub bisug</a></p>
+<body>
+    <h1>🎨 AI Image Generator API</h1>
+    <p>Created by <a href="https://github.com/bisug" target="_blank">bisug</a> • Supercharged by 🤖 ChatGPT</p>
 
     <h3>How to use the API</h3>
     <code>GET /generate?model=MODEL_NAME&prompt=YOUR_PROMPT</code>
 
-    <h4>Available Models:</h4>
+    <h4>Available Models</h4>
     <ul>
         {% for key, value in models.items() %}
         <li><b>{{ key }}</b> → {{ value }}</li>
         {% endfor %}
     </ul>
-
-    <h3>Example:</h3>
-    <p><a href="/generate?model=sdxl&prompt=A+beautiful+golden+bird">Generate Golden Bird</a></p>
 </body>
 </html>
